@@ -1,0 +1,1 @@
+alert('zebiaoyes--我是外部js文件')
