@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>年会案例</title>
+</head>
+<body>
+    <div id="wrapper">
+        <strong>zebiaoyes年会抽奖</strong>
+        <h1>一等奖： <span id="one" >????</span></h1>
+        <h3>二等奖： <span id="two">???</span></h3>
+        <h5>三等奖： <span id="three">???</span></h5>
+    </div>
+
+    <script> 
+        const personArr = ['张三','李四','王五','赵六','钱七','孙八'];
+        // 点击按钮，随机抽取三个元素
+
+        // 获取one元素
+        const random1 = Math.floor(Math.random() * personArr.length);
+        const one = document.querySelector('#one');
+        one.innerHTML = personArr[random1];
+        // 然后抽过奖的给它删了
+        personArr.splice(random1,1);
+
+        // 获取two元素
+        const random2 = Math.floor(Math.random() * personArr.length);
+        const two = document.querySelector('#two');
+        two.innerHTML = personArr[random2];
+        // 然后抽过奖的给它删了 
+        personArr.splice(random2,1);
+
+        // 获取three元素
+        const random3 = Math.floor(Math.random() * personArr.length);
+        const three = document.querySelector('#three');
+        three.innerHTML = personArr[random3];
+        // 然后抽过奖的给它删了 
+        personArr.splice(random3,1);
+
+
+    </script>
+    
+</body>
+</html>
